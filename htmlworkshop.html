@@ -1,0 +1,137 @@
+<! DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+#div1{
+width: 300px;
+height: 300px;
+background-color: rgb(255,0,0);
+}
+#div3{
+width: 300px;
+height: 300px;
+background-color: rgb(255,0,0);
+animation: anim 3s infinite alternate;
+}
+@keyframes anim{
+
+0% {background-color: #384ab3;width:300px;}
+
+25% {background-color: #c7bf3d;}
+
+50% {background-color: #39fe94;}
+
+75% {background-color: #e485cf;}
+
+100% {background-color: #475b40;width:100px;}
+
+}
+</style>
+</head>
+
+<body>
+
+<h1>HTML/CSS Workshop</h1>
+
+<h3>HTML Basic Layout</h3>
+
+<p>&lt;! DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt;</p>
+<br>
+
+<p>&lt;head&gt;</p>
+<p> Setup (CSS, JS, other Reasources) Goes Here</p>
+<p>&lt;/head&gt;</p>
+<br>
+<p>&lt;body&gt;</p>
+<p> Actual Visual Stuff Goes Here </p>
+<p>&lt;/body&gt;</p>
+
+<br>
+<p>&lt;/html&gt;</p>
+
+
+<h3> Some Tags </h3>
+<h4> Tags that go in body</h4>
+<p> &lt;p&gt; Paragraph: holds text like &lt;p&gt; Hi &lt;/p&gt;
+<p>
+ &lt;a&gt; Link/Anchor: link to another webpage like &lt;a href=&quot;https://www.google.com&quot;&gt;Link Text&lt;/a&gt; </p><p>
+          The part with href=&quot;URLGOESHERE&quot; is called an attribute.</p><p>
+ &lt;img&gt; Image: &lt;img src=&quot;rumakerspacelogo.gif&quot;&gt; for local images and a url instead for other images</p>
+ &lt;div&gt; Division: groups HTML like: &lt;div&gt; html goes here &lt;/div&gt;
+<p>All tags can have an id=&quot;&quot; and class=&quot;&quot; attribute that we can use to identify them in other languages</p></p>
+<p>&lt;h1&gt; Heading &lt;/h1&gt; Depending on the number (from 1 to 5) the heading is smaller or larger (1 is largest)</p>
+<p>&lt;b&gt; bold text&lt;/b&gt;</p>
+<p>&lt;u&gt;underlined text&lt;/u&gt;</p>
+<p>&lt;s&gt;striked through text&lt;/s&gt;</p>
+<p>&lt;br&gt; New Line</p>
+<h4> Tags that go in head</h4>
+<p> &lt;script&gt; Javascript Code goes here&lt;/script&gt;</p>
+<p>&lt;style&gt; CSS Code goes here&lt;/style&gt;</p>
+
+<h4>To Nest Tags:</h4>
+<p>&lt;h4&gt;&lt;b&gt;Bold Heading&lt;/b&gt;&lt;/h4&gt;</p>
+<p>Output:<h4><b>Bold Heading</b></h4></p>
+
+
+<h3>Styling Your HTML with CSS</h3>
+Say you have a tag like:
+<p>&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</p>
+This is empty so it looks like:
+<br>
+<div id="div2"></div>
+However, in our head, we will add a style:
+<p>&lt;style&gt;</p>
+<p>#div1{</p>
+<p>width: 300px;</p>
+<p>height: 300px;</p>
+<p>background-color: rgb(255,0,0);</p>
+<p>}</p>
+<p>&lt;/style&gt;</p>
+Now our div looks like:
+<div id="div1"></div>
+<p>The #div1 is a selector, it selects any tag that has id="div1"</p>
+<p>Within the curly braces, we can put in what are called css properties that modify whatever tag is selected. They are written as follows:</p>
+<p>property-name: value;</p>
+<p>There are many properties including ones that space text, change fonts, and pretty much anything you can think of. A good refrence of all these properties and examples can be found here:</p>
+<a href="https://www.w3schools.com/cssref/default.asp">https://www.w3schools.com/cssref/default.asp</a>
+
+<h3> Animating your CSS</h3>
+<p>Css properties don't have to be static, they can change with time using CSS animations.</p>
+<p>To create an animation we can edit our origrinal styling:</p>
+<p>#div1{</p>
+<p>width: 300px;</p>
+<p>height: 300px;</p>
+<p>background-color: rgb(255,0,0);</p>
+<p>animation: anim 3s infinite alternate;</p>
+<p>}</p>
+<br>
+<p>@keyframes anim{</p>
+<p>0% {background-color: #384ab3;width:300px;}</p>
+<p>25% {background-color: #c7bf3d;}</p>
+<p>50% {background-color: #39fe94;}</p>
+<p>75% {background-color: #e485cf;}</p>
+<p>100% {background-color: #475b40;width:100px;}</p>
+<p>}</p>
+<br>
+And now our div looks like this:
+<br>
+<div id="div3"></div>
+<p> The property animation sets out how the animation will play out, it is saying to use the keyframes called anim, have a duration of 3 seconds, run infinitly many times, and play it forwards and reverse each time (if you only want to only play forward and then jump back to 0% after it hits 100% in the keyframes, just get rid of alternate).</p>
+<style>
+@keyframes anim2{
+0% {letter-spacing: 0px;color:#000000;}
+100% {letter-spacing: 10px;color:#aaaaaa;}
+}
+</style>
+
+<p style="letter-spacing: 30px;color:#000000;animation: anim2 4s infinite;"> Using HTML and CSS you can do all sorts of crazy things!!!</p>
+<p> For more information on anything css or html <a href="https://www.w3schools.com">w3schools.com</a> is a great resource</p>
+</body>
+
+
+
+</html>

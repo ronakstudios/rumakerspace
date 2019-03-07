@@ -34,7 +34,7 @@
 
 
 
-  <nav class="white " role="navigation">
+ <nav class="white " role="navigation">
     <div class="nav-wrapper container">
 
 
@@ -43,7 +43,10 @@
 	    <a id="logo-container" href="index.html" class="desktop-only brand-logo center">  <p style="font-weight:600;font-size: 1.7rem;  padding-top: 30px;  line-height: 1rem;">RU Makers</p></a>
 
 
-      <a id="logo-container2" href="index.html" class="brand-logo">  <img class="responsive-img" width="144" id="logo33" height="auto" src="rumakerspacelogo.gif"></a>
+      <a id="logo-container2" href="index.html" class="brand-logo">
+	      <video autoplay="autoplay" loop="loop"  width="267" class="responsive-video">
+	<source src="balloonsgif.mp4" type="video/mp4" />
+		      </a>
 
 
      <ul class="right hide-on-med-and-down">
@@ -254,6 +257,7 @@
 
 	<script> Materialize.showStaggeredList('#boardList')</script>
 
+
 <footer class="page-footer grey darken-4">
     <div class="container">
       <div class="row">
@@ -274,7 +278,7 @@
 	    <div class="col s3">
 			<div class="center row">
 				
-		      <img class="responsive-img" src="logo.png" width="90" style="padding-top: 10px">
+		      <img class="responsive-img" src="logo.png" width="200" style="padding-top: 10px">
 				</div>
 	      </div>
 	    </div>
@@ -293,7 +297,7 @@
   </footer>
 
 
-  <!--  Scripts-->
+<!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
@@ -302,7 +306,7 @@
   </script>
 <script src="https://ronakstudios.github.io/sweetheart/js/typed.js"></script>
 	<script>
-   
+   document.getElementsByClassName("responsive-video")[0].play();
     $(function(){
         $(".sss").typed({
             strings: ["<font color=\"#ffffff\">Coded By Hand.</font>","<font color=\"#ffffff\">Design, Inspire, Create, RU Makers</font>"],
@@ -322,11 +326,13 @@
   <script src="jade/search.js"></script>
   <script src="bin/materialize.js"></script>
 
-	<script> 
-
-Materialize.showStaggeredList('#boardList')
-Materialize.fadeInImage('#boardList');
+<script>Materialize.showStaggeredList('#main')
+Materialize.fadeInImage('#main');
+	
+	document.getElementsByClassName("responsive-video")[0].play();
 </script>
+
+
 
   </body>
 
